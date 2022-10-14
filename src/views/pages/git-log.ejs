@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+			.header_component: contenedor de la sesion, definimos un ID
+			.para implementar este elemento en './src/js/main.js'
+		-->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+				.nav_component: contenedor de la sesion, definimos un ID 
+				.para implementar este elemento en './src/js/main.js'
+			-->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+					section_banner: contenedor de 1 tag-h2, de banner_line_titles
+					y 1 tag-p
+				-->
+				<section class="section_banner">
+					<!--  
+						tag-h2: en esta definimos el titulo del banner
+					-->
+					<h2>Git Log</h2>
+
+					<!--  
+						banner_line_titles: esta tag la definimos para crear la
+						linea del titulo
+					-->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+						tag-p: en esta definimos el parrafo de la seccion
+					-->
+					<p>
+						Nos permite conocer detalles de los commits realizados
+						en nuestro repositorio local como lo son el codigo del
+						commit, la fecha de creacion, su descripcion y el
+						usuario que lo realizo con lo cual podemos realizar
+						seguimientos de ser necesario.
+					</p>
+				</section>
+
+				<!--  
+					sections_container: contenedor de las secciones que componen
+					esta vista
+				-->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Conociendo el autor y la fecha - git log</h3>
+
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/c01.png"
+								alt="modulo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>
+							02. Conociendo el codigo y su descripcion - git log
+							--oneline
+						</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/c02.png"
+								alt="modulo"
+							/>
+						</div>
+					</section>
+				</div>
+
+				<!--  
+                    section_footer
+                -->
+				<footer class="section_footer">End Git Log</footer>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

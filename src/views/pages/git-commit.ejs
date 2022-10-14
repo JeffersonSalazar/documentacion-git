@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+			.header_component: contenedor de la sesion, definimos un ID
+			.para implementar este elemento en './src/js/main.js'
+		-->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner, sections_container
+				y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Git Commit</h2>
+
+					<!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						Nos permite regresar a una porsion exacta del codigo y
+						con ello conocer los cambio que habiamos generado hasta
+						ese momento, lo que nos resulta util a la hora de
+						solucionar posibles errores que se generan cuando
+						hacemos nuevos cambios en un archivo.
+					</p>
+				</section>
+
+				<!--  
+					sections_container: contenedor de las secciones que componen
+					esta vista
+				-->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Generando un cambio en index.html</h3>
+
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/b01.png"
+								alt="modificando el index"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>
+							02. Guardando los cambios - git commit -m "text"
+						</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/g05.png"
+								alt="git commit"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>
+							03. Revirtiendo un commit - git revert
+							"codigo-commit"
+						</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/b02.png"
+								alt="git rvirtiendo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Salida bin</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/b03.png"
+								alt="salida de bin"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>05. Verificando el commit revertido</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/b05.png"
+								alt="verificando el commit revertido"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>06. Commit revertido</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/b04.png"
+								alt="commit revertido"
+							/>
+						</div>
+					</section>
+
+					<div class="division_line">
+						-------------------- End --------------------
+					</div>
+
+					<section class="sect_content">
+						<h3>
+							01. Navegar a un commit - git checkout
+							"codigo-commit"
+						</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/g01.png"
+								alt="git checkout"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Dentro del commit</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/g02.png"
+								alt="dentro del commit"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Saliendo del commit</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/g03.png"
+								alt="saliendo del commit"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Validando la salida del commit</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commits/g04.png"
+								alt="validando la salida"
+							/>
+						</div>
+					</section>
+				</div>
+
+				<!--  
+                    section_footer
+                -->
+				<footer class="section_footer">End Git Commit</footer>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
