@@ -14,7 +14,7 @@ let express = require("express"),
 	definidas las rutas (endpoints) encargadas de entregar las
 	diferentes vistas al usuario
 */
-const routesViews = require("./routes/r-views");
+const routesViews = require("./src/routes/r-views");
 
 /* 
 	hacemos uso del metodo express.static() para enlazar nuestros
@@ -24,7 +24,7 @@ const routesViews = require("./routes/r-views");
 	ya que si este, esta dentro de la carpeta src definimos "./"  
 	y si esta por fuera de la carpeta src definimos "src"
 */
-app.use(express.static(path.join(__dirname, "./")));
+app.use(express.static(path.join(__dirname, "./src")));
 
 /* 
 	primero configuramos el motor de plantilla usado para este
@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, "./")));
 	y si esta por fuera de la carpeta src definimos "src/views"
 */
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "./views"));
+app.set("views", path.join(__dirname, "./src/views"));
 
 /* 
 	hacemos uso de nuestras rutas

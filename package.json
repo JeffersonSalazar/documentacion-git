@@ -4,7 +4,7 @@
 	"description": "Esta es una documentacion propia basada en mis conocimientos sobre git y github",
 	"main": "index.js",
 	"scripts": {
-		"start": "node src/index.js"
+		"start": "node index.js"
 	},
 	"keywords": [
 		"git",
