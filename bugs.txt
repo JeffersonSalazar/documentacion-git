@@ -1,3 +1,5 @@
+quedamos en la seccion commit/amend (amend no tiene ruta ni archivo)
+
 1 falta completar la descripcion de la seccion git config
 
 

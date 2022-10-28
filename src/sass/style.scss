@@ -150,20 +150,21 @@ body {
 .components_container {
 	/* 
         nav_component: definimos position: fixed junto con sus propiedades 
-		top, bottom, left y z-index para fijar el menu de navegacion y
-		posicionarlo en la parte izquierda y que tome todo el alto de la
-		pantalla, finalmente definimos un espaciado personalizado en el eje-X
-		y con overflow: auto generamos un scroll en el eje-Y para cuando la
-		altura de la pantalla sea menor a la altura del menu de navegacion
+		top, left y z-index para fijar el menu de navegacion y posicionarlo 
+		en la parte izquierda, tambien definimos un height: 100vh  para que 
+		este elemento tome todo el alto de la pantalla, finalmente definimos 
+		un espaciado personalizado en el eje-X y con overflow: auto generamos 
+		un scroll en el eje-Y para cuando la altura de la pantalla sea menor 
+		a la altura del menu de navegacion
     */
 	.nav_component {
 		position: fixed;
 		top: $heightFixed;
-		bottom: 0;
 		left: 0;
 		z-index: 8;
 		border-right: 1px solid $borderOne;
 		width: 240px;
+		height: 100vh;
 		padding: 0 20px 0 25px;
 		overflow: auto;
 
@@ -271,20 +272,47 @@ body {
 			padding: 30px 0;
 
 			/*
-				tag-li: definimos un margen en la parte inferior de este elemento
+				li_dropdown: definimos un margen en la parte inferior de este 
+				elemento
 			*/
-			li {
+			.li_dropdown {
 				list-style: none;
 				margin-bottom: 18px;
 
 				/*
-					tag-a
+					cuando li_dropdown tiene la clase js_show_dropdown_menu
+					seleccionamos a dropdown_menu y definimos display block
+					y una altura para hacer visible los elementos que este
+					contiene
+				*/
+				&.js_show_dropdown_menu .dropdown_menu {
+					display: block;
+					max-height: 999px;
+				}
+
+				/*
+					cuando li_dropdown tiene la clase js_show_dropdown_menu
+					seleccionamos a la tag-svg que se encuentra dentro de la
+					tag-a y definimos una rotacion de 180 grados
+				*/
+				&.js_show_dropdown_menu a svg {
+					transform: rotate(180deg);
+				}
+
+				/*
+					tag-a: definimos flexbox con su propiedad
+					justify-content para generar un espaciado entre
+					el enlace y el icono y align-items para centrar de manera
+					vertical los elementos que este contiene 
 				*/
 				a {
 					text-decoration: none;
 					color: $colorFour;
 					font-size: 1.1rem;
 					font-weight: 600;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
 
 					/*
 						cuando hacemos :hover sobre la tag-a modificamos
@@ -296,6 +324,64 @@ body {
 
 					&.js_active_link {
 						color: $colorOne;
+					}
+
+					&.js_active_link svg {
+						fill: $colorOne;
+					}
+
+					/*
+					tag-svg: 
+				*/
+					/*
+						tag-svg: definimos vertical-align: top para remover un 
+						espaciado que generan los navegadores en los iconos, 
+						finalmente definimos una transicion para cuando el 
+						icono gira al momento de hacer click li_dropdown
+					*/
+					svg {
+						vertical-align: top;
+						fill: $colorFour;
+						width: 12px;
+						height: 12px;
+						transition: transform 0.3s;
+					}
+				}
+
+				/*
+					dropdown_menu: definimos un max-height: 0 para
+					reducir la altura de este elemento luego
+					con la propiedad overflow: hidden ocultamos 
+					los valores que sobresalen del elemento,
+					finalmente definimos un espaciado en el eje-Y 
+					para este elemento
+				*/
+				.dropdown_menu {
+					max-height: 0;
+					overflow: hidden;
+					padding: 0 13px;
+
+					/*
+						tag-li: definimos un espaciado en el eje-Y para este elemento
+					*/
+					li {
+						list-style: none;
+						padding: 10px 0;
+
+						/*
+							tag-a
+						*/
+						a {
+							font-size: 1rem;
+
+							/*
+								cuando hacemos :hover sobre la tag-a modificamos
+								el color de este elemento
+							*/
+							&:hover {
+								color: $colorOne;
+							}
+						}
 					}
 				}
 			}
@@ -373,7 +459,7 @@ body {
 
 			/*
 				dispositivos menores a 952px: modificamos el tamaño de
-				fuente de este elemento
+				fuente y el margen del eje-y de este elemento
 			*/
 			@media (max-width: 952px) {
 				font-size: 1.9rem;
@@ -409,7 +495,7 @@ body {
 		.description_component {
 			/*
 				description_paragraph: definimos una separacion de lineas y un margen
-				en el eje-Y para este elemento
+				inferior en este elemento
 			*/
 			.description_paragraph {
 				font-size: 1.5rem;
@@ -480,6 +566,35 @@ body {
 					font-size: 2rem;
 					line-height: 1.2;
 					margin-bottom: 40px;
+
+					/*
+						dispositivos menores a 336px: modificamos el tamaño de
+						fuente de este elemento
+					*/
+					@media (max-width: 336px) {
+						font-size: 1.7rem;
+					}
+				}
+
+				/*
+					code_box: definimos un margen en la parte inferior de este 
+					elemento y un espaciado de 12px para todos los ejes
+				*/
+				.code_box {
+					background-color: #343d4d;
+					color: $colorThree;
+					border-radius: 5px;
+					box-shadow: 0 2px 6px 0 #ccc;
+					margin-bottom: 40px;
+					padding: 12px;
+
+					/*
+						tag-span y tag-strong
+					*/
+					span,
+					strong {
+						color: $colorOne;
+					}
 				}
 
 				/*
@@ -503,16 +618,6 @@ body {
 						box-shadow: 0 2px 6px 0 #ccc;
 					}
 				}
-			}
-
-			/*
-				division_line: definimos un margen en la parte
-				inferior para este elemento
-			*/
-			.division_line {
-				text-align: center;
-				color: $colorFive;
-				margin-bottom: 90px;
 			}
 		}
 

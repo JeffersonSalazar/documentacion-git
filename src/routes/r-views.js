@@ -32,9 +32,30 @@ router.get("/git-init", (req, res) => {
 	});
 });
 
-router.get("/git-commit", (req, res) => {
-	res.render("pages/git-commit", {
-		title: "git commit",
+/* 
+	______________________ commit ______________________
+*/
+router.get("/add-commit", (req, res) => {
+	res.render("pages/add-commit", {
+		title: "agregar un commit",
+	});
+});
+
+router.get("/revert-commit", (req, res) => {
+	res.render("pages/revert-commit", {
+		title: "revertir un commit",
+	});
+});
+
+router.get("/reset-commit", (req, res) => {
+	res.render("pages/reset-commit", {
+		title: "resetiar un commit",
+	});
+});
+
+router.get("/checkout-commit", (req, res) => {
+	res.render("pages/checkout-commit", {
+		title: "navegar a un commit",
 	});
 });
 
