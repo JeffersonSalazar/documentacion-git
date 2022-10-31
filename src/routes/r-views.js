@@ -20,24 +20,39 @@ router.get("/", (req, res) => {
 	});
 });
 
+/* 
+	______________________ config ______________________
+*/
 router.get("/git-config", (req, res) => {
 	res.render("pages/git-config", {
-		title: "git config",
+		title: "configuracion de git",
 	});
 });
 
+/* 
+	______________________ init ______________________
+*/
 router.get("/git-init", (req, res) => {
 	res.render("pages/git-init", {
-		title: "git init",
+		title: "inicializar un reporsitorio local",
+	});
+});
+
+/* 
+	______________________ add ______________________
+*/
+router.get("/git-add", (req, res) => {
+	res.render("pages/git-add", {
+		title: "agregar archivos al stagin area",
 	});
 });
 
 /* 
 	______________________ commit ______________________
 */
-router.get("/add-commit", (req, res) => {
-	res.render("pages/add-commit", {
-		title: "agregar un commit",
+router.get("/save-commit", (req, res) => {
+	res.render("pages/save-commit", {
+		title: "guardar un commit",
 	});
 });
 

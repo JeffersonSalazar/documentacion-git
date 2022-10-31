@@ -37,7 +37,7 @@
 					<!--  
 						tag-h2: en esta definimos el titulo del banner
 					-->
-					<h2>Init</h2>
+					<h2>Add</h2>
 
 					<!--  
 						banner_line_titles: esta tag la definimos para crear la
@@ -49,12 +49,11 @@
 						tag-p: en esta definimos el parrafo de la seccion
 					-->
 					<p>
-						Para poder implementar los comandos que
-						<strong>git</strong> nos ofrece para la administracion
-						de nuestro proyecto, primero debemos inicializar un
-						repositorio local y para ello necesitamos una carpeta
-						proyecto y la consola de comandos
-						<strong>gitbash</strong>
+						Cuando generamos un cambio en nuestro proyecto este se
+						convierte en una nueva version para <strong>git</strong>
+						En este apartado conoceremos los diferentes estados de
+						esos cambios, las lineas donde se generaron y finalmente
+						veremos como subir y bajar del stagin area esos cambios.
 					</p>
 				</section>
 
@@ -70,7 +69,14 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Carpeta proyecto y git bash</h3>
+						<h3>01. Estado de archivos pendientes</h3>
+
+						<!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
+						<p class="code_box">
+							<span>></span> git <strong>status</strong>
+						</p>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
@@ -80,26 +86,68 @@
 								tag-img: en esta definimos la imagen de la seccion
 							-->
 							<img
-								src="./assets/images/gitproyects/g01.png"
-								alt="carpeta proyecto y git bash"
+								src="./assets/images/gitproyects/g03.png"
+								alt="estado de archivos pendientes"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Iniciando un repositorio local</h3>
+						<h3>02. Verificando los cambios por lineas</h3>
 
-						<!--  
-                            code_box: en esta definimos la guia de codigo en ejecucion
-                        -->
 						<p class="code_box">
-							<span>></span> git <strong>init</strong>
+							<span>></span> git <strong>diff</strong>
 						</p>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/gitproyects/g02.png"
-								alt="iniciando un repositorio local"
+								src="./assets/images/gitproyects/g15.png"
+								alt="verificando los cambios por lineas"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Añadiendo los archivos al stagin area</h3>
+
+						<p class="code_box">
+							<span>></span> git <strong>add .</strong>
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/gitproyects/g04.png"
+								alt="añadiendo los archivos al stagin area"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Estado de los archivos subidos con exito</h3>
+
+						<p class="code_box">
+							<span>></span> git <strong>status</strong>
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/gitproyects/g050.png"
+								alt="estado de archivos exitosos"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>06. Bajando los archivos del stagin area</h3>
+
+						<p class="code_box">
+							<span>></span> git <strong>reset .</strong>
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/gitproyects/g14.png"
+								alt="bajando los archivos del stagin area"
 							/>
 						</div>
 					</section>
@@ -108,7 +156,7 @@
 				<!--  
 					section_footer
 				-->
-				<footer class="section_footer">Init - Git</footer>
+				<footer class="section_footer">Add - Git</footer>
 			</main>
 		</div>
 
