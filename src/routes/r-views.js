@@ -48,6 +48,15 @@ router.get("/git-add", (req, res) => {
 });
 
 /* 
+	______________________ ignore ______________________
+*/
+router.get("/git-ignore", (req, res) => {
+	res.render("pages/git-ignore", {
+		title: "ignorando archivos",
+	});
+});
+
+/* 
 	______________________ commit ______________________
 */
 router.get("/save-commit", (req, res) => {
@@ -59,6 +68,12 @@ router.get("/save-commit", (req, res) => {
 router.get("/revert-commit", (req, res) => {
 	res.render("pages/revert-commit", {
 		title: "revertir un commit",
+	});
+});
+
+router.get("/amend-commit", (req, res) => {
+	res.render("pages/amend-commit", {
+		title: "sobrescribir un commit",
 	});
 });
 
@@ -74,63 +89,69 @@ router.get("/checkout-commit", (req, res) => {
 	});
 });
 
-router.get("/git-push", (req, res) => {
-	res.render("pages/git-push", {
-		title: "git push",
-	});
-});
-
+/* 
+	______________________ log ______________________
+*/
 router.get("/git-log", (req, res) => {
 	res.render("pages/git-log", {
-		title: "git log",
+		title: "detalles de los commits",
 	});
 });
 
+/* 
+	______________________ brach ______________________
+*/
 router.get("/git-branch", (req, res) => {
 	res.render("pages/git-branch", {
-		title: "git branch",
+		title: "trabajando con ramas",
 	});
 });
 
-router.get("/git-merge", (req, res) => {
-	res.render("pages/git-merge", {
-		title: "git merge",
+/* 
+	______________________ merge ______________________
+*/
+router.get("/fusion-merge", (req, res) => {
+	res.render("pages/fusion-merge", {
+		title: "fusionando ramas",
 	});
 });
 
-router.get("/git-pull", (req, res) => {
-	res.render("pages/git-pull", {
-		title: "git pull",
+router.get("/conflicts-merge", (req, res) => {
+	res.render("pages/conflicts-merge", {
+		title: "conflictos en la fusion",
 	});
 });
 
-router.get("/git-conflicts", (req, res) => {
-	res.render("pages/git-conflicts", {
-		title: "git conflicts",
+/* 
+	______________________ push ______________________
+*/
+router.get("/success-push", (req, res) => {
+	res.render("pages/success-push", {
+		title: "subiendo cambios a github",
 	});
 });
 
+router.get("/conflicts-push", (req, res) => {
+	res.render("pages/conflicts-push", {
+		title: "conflictos en la subida",
+	});
+});
+
+/* 
+	______________________ clone ______________________
+*/
 router.get("/git-clone", (req, res) => {
 	res.render("pages/git-clone", {
-		title: "git clone",
+		title: "clonar un repositorio",
 	});
 });
 
-router.get("/git-ignore", (req, res) => {
-	res.render("pages/git-ignore", {
-		title: "git ignore",
-	});
-});
-
-router.get("/git-hub", (req, res) => {
-	res.render("pages/git-hub", {
-		title: "github",
-	});
-});
-
-router.get("/git-pages", (req, res) => {
-	res.render("pages/git-pages", {
-		title: "github pages",
+/* 
+	______________________ pull ______________________
+*/
+router.get("/git-pull", (req, res) => {
+	res.render("pages/git-pull", {
+		title: "actualizando un proyecto",
 	});
 });
 

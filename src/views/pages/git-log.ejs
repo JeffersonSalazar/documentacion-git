@@ -39,7 +39,7 @@
 					<!--  
 						tag-h2: en esta definimos el titulo del banner
 					-->
-					<h2>Git Log</h2>
+					<h2>Log</h2>
 
 					<!--  
 						banner_line_titles: esta tag la definimos para crear la
@@ -52,10 +52,10 @@
 					-->
 					<p>
 						Nos permite conocer detalles de los commits realizados
-						en nuestro repositorio local como lo son el codigo del
-						commit, la fecha de creacion, su descripcion y el
-						usuario que lo realizo con lo cual podemos realizar
-						seguimientos de ser necesario.
+						en nuestro proyecto como lo son el codigo del commit, su
+						descripcion, el usuario que lo genero y la fecha de
+						creacion toda esta informacion es de suma importancia
+						cuando necesitamos solucionar errores.
 					</p>
 				</section>
 
@@ -71,29 +71,101 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Conociendo el autor y la fecha - git log</h3>
+						<h3>01. Conociendo el codigo de un commit</h3>
+
+						<!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
+						<p class="code_box">
+							<span>></span> git <strong>log</strong> --oneline
+						</p>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/commits/c01.png"
+								src="./assets/images/log/log1.png"
+								alt="conociendo el codigo de un commit"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Conociendo el autor del commit - user</h3>
+
+						<p class="code_box">
+							<span>></span> git <strong>log</strong> --oneline
+							--author "user"
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/log/log3.png"
+								alt="conociendo el autor del commit - user"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Conociendo el autor del commit - email</h3>
+
+						<p class="code_box">
+							<span>></span> git <strong>log</strong> --oneline
+							--author "email"
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/log/log6.png"
+								alt="conociendo el autor del commit - email"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Conociendo un limite de commits</h3>
+
+						<p class="code_box">
+							<span>></span> git <strong>log</strong> --oneline -3
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/log/log2.png"
 								alt="modulo"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>
-							02. Conociendo el codigo y su descripcion - git log
-							--oneline
-						</h3>
+						<h3>05. Conociendo un commit por su fecha - antes</h3>
+
+						<p class="code_box">
+							<span>></span> git <strong>log</strong> --oneline
+							--before "aa-dd-mm"
+						</p>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/commits/c02.png"
-								alt="modulo"
+								src="./assets/images/log/log4.png"
+								alt="conociendo un commit por su fecha - antes"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>06. Conociendo un commit por su fecha - despues</h3>
+
+						<p class="code_box">
+							<span>></span> git <strong>log</strong> --oneline
+							--after "aa-dd-mm"
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/log/log5.png"
+								alt="conociendo un commit por su fecha - despues"
 							/>
 						</div>
 					</section>
@@ -102,7 +174,7 @@
 				<!--  
                     section_footer
                 -->
-				<footer class="section_footer">End Git Log</footer>
+				<footer class="section_footer">Log - Git</footer>
 			</main>
 		</div>
 

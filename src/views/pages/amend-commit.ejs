@@ -7,9 +7,9 @@
 
 	<body>
 		<!--  
-            .header_component: contenedor de la sesion, definimos un ID
-            .para implementar este elemento en './src/js/main.js'
-        -->
+			.header_component: contenedor de la sesion, definimos un ID
+			.para implementar este elemento en './src/js/main.js'
+		-->
 		<header class="header_component" id="header-component">
 			<%- include('../partials/header'); %>
 		</header>
@@ -27,8 +27,8 @@
 			</nav>
 
 			<!--  
-                main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                main_components: contenedor de section_banner, sections_container
+				y 1 tag-footer
             -->
 			<main class="main_components">
 				<!--  
@@ -39,7 +39,7 @@
 					<!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-					<h2>Config</h2>
+					<h2>Amend</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -51,20 +51,19 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Para trabajar con <strong>git</strong> necesitamos
-						especificar un usuario y un email, estas credenciales
-						nos proporsionan permisos los cuales nos permiten
-						administrar nuestros proyectos. Finalmente tenemos un
-						comando que nos permite trabajar en proyectos
-						desarrollados en diferentes sistemas operativos sin que
-						se presenten errores de compatibilidad.
+						Este comando nos permite añadir cambios de ultimo minuto
+						en un
+						<strong>commit</strong> existente sin tener que generar
+						uno nuevo, entre sus opciones nos permite conservar la
+						descripcion del <strong>commit</strong> existente o
+						modificarla por una nueva descripcion.
 					</p>
 				</section>
 
 				<!--  
-                    sections_container: contenedor de las secciones que componen
-                    esta vista
-                -->
+					sections_container: contenedor de las secciones que componen
+					esta vista
+				-->
 				<div class="sections_container">
 					<!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
@@ -73,64 +72,89 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Conocer y configurar el usuario</h3>
-
-						<!--  
-                            code_box: en esta definimos la guia de codigo en ejecucion
-                        -->
-						<p class="code_box">
-							<span>></span> git <strong>config</strong> --global
-							user<strong>.name</strong>
-						</p>
+						<h3>01. Commit existente</h3>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/config/con1.png"
-								alt="conocer y configurar el usuario"
+								src="./assets/images/commit/ame1.png"
+								alt="commit existente"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Conocer y configurar el email</h3>
-
-						<p class="code_box">
-							<span>></span> git <strong>config</strong> --global
-							user<strong>.email</strong>
-						</p>
+						<h3>02. Consultando el commit</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/config/con2.png"
-								alt="conocer y configurar el email"
+								src="./assets/images/commit/ame3.png"
+								alt="consultando el commit"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
 						<h3>
-							03. Estandarizacion cod 1 windows - cod 2- linux y
-							mac
+							03. Sobrescribiendo el commit conservando su
+							descripcion
 						</h3>
 
+						<!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
 						<p class="code_box">
-							<span>></span> git <strong>config</strong> --global
-							core<strong>.autocrlf</strong> true
-						</p>
-
-						<p class="code_box">
-							<span>></span> git <strong>config</strong> --global
-							core<strong>.autocrlf</strong> input
+							<span>></span> git <strong>commit</strong> --amend
+							--no-edit
 						</p>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/config/con3.png"
-								alt="estandarizacion windows, linux y
-							mac"
+								src="./assets/images/commit/ame2.png"
+								alt="sobrescribiendo el commit"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Consultando el commit</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commit/ame3.png"
+								alt="consultando el commit"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>
+							05. Sobrescribiendo el commit modificando su
+							descripcion
+						</h3>
+
+						<p class="code_box">
+							<span>></span> git <strong>commit</strong> --amend
+							-m "descripcion"
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commit/ame4.png"
+								alt="sobrescribiendo el commit"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>06. Consultando el commit</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/commit/ame5.png"
+								alt="consultando el commit"
 							/>
 						</div>
 					</section>
@@ -139,7 +163,7 @@
 				<!--  
                     section_footer
                 -->
-				<footer class="section_footer">Config - Git</footer>
+				<footer class="section_footer">Amend - Commit</footer>
 			</main>
 		</div>
 

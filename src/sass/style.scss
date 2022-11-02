@@ -153,9 +153,9 @@ body {
 		top, left y z-index para fijar el menu de navegacion y posicionarlo 
 		en la parte izquierda, tambien definimos un height: 100vh  para que 
 		este elemento tome todo el alto de la pantalla, finalmente definimos 
-		un espaciado personalizado en el eje-X y con overflow: auto generamos 
-		un scroll en el eje-Y para cuando la altura de la pantalla sea menor 
-		a la altura del menu de navegacion
+		un espaciado personalizado en el eje-X y con overflow: auto 
+		generamos un scroll en el eje-Y para cuando la altura de la pantalla 
+		sea menor a la altura del menu de navegacion
     */
 	.nav_component {
 		position: fixed;
@@ -266,10 +266,12 @@ body {
 		}
 
 		/*
-			tag-ul: definimos un espaciado en el eje-Y para este elemento 
+			tag-ul: definimos un espaciado personalizado en el eje-Y para este elemento 
+			el espaciado inferior permite solucionar un error que se presenta 
+			impidiendo que el ultimo item del menu se vea correctamente
 		*/
 		ul {
-			padding: 30px 0;
+			padding: 30px 0 70px;
 
 			/*
 				li_dropdown: definimos un margen en la parte inferior de este 

@@ -7,9 +7,9 @@
 
 	<body>
 		<!--  
-            .header_component: contenedor de la sesion, definimos un ID
-            .para implementar este elemento en './src/js/main.js'
-        -->
+			.header_component: contenedor de la sesion, definimos un ID
+			.para implementar este elemento en './src/js/main.js'
+		-->
 		<header class="header_component" id="header-component">
 			<%- include('../partials/header'); %>
 		</header>
@@ -27,8 +27,8 @@
 			</nav>
 
 			<!--  
-                main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                main_components: contenedor de section_banner, sections_container
+				y 1 tag-footer
             -->
 			<main class="main_components">
 				<!--  
@@ -39,7 +39,7 @@
 					<!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-					<h2>Config</h2>
+					<h2>Conflicts</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -51,20 +51,20 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Para trabajar con <strong>git</strong> necesitamos
-						especificar un usuario y un email, estas credenciales
-						nos proporsionan permisos los cuales nos permiten
-						administrar nuestros proyectos. Finalmente tenemos un
-						comando que nos permite trabajar en proyectos
-						desarrollados en diferentes sistemas operativos sin que
-						se presenten errores de compatibilidad.
+						Estos se presentan al momento de fusionar las ramas
+						cuando <strong>git</strong> encuentra sobrescritura de
+						archivos, es decir cuando los mismos son modificados por
+						una o mas personas, cabe recordar que para realizar una
+						fusion las ramas implicadas no deben tener commits
+						pendientes y que estos <strong>conflictos</strong> se
+						solucionan especificando el cambio correcto.
 					</p>
 				</section>
 
 				<!--  
-                    sections_container: contenedor de las secciones que componen
-                    esta vista
-                -->
+					sections_container: contenedor de las secciones que componen
+					esta vista
+				-->
 				<div class="sections_container">
 					<!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
@@ -73,64 +73,78 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Conocer y configurar el usuario</h3>
-
-						<!--  
-                            code_box: en esta definimos la guia de codigo en ejecucion
-                        -->
-						<p class="code_box">
-							<span>></span> git <strong>config</strong> --global
-							user<strong>.name</strong>
-						</p>
+						<h3>01. Rama master</h3>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/config/con1.png"
-								alt="conocer y configurar el usuario"
+								src="./assets/images/merge/con1.png"
+								alt="rama master"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Conocer y configurar el email</h3>
-
-						<p class="code_box">
-							<span>></span> git <strong>config</strong> --global
-							user<strong>.email</strong>
-						</p>
+						<h3>02. Rama developers</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/config/con2.png"
-								alt="conocer y configurar el email"
+								src="./assets/images/merge/con2.png"
+								alt="rama developers"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>
-							03. Estandarizacion cod 1 windows - cod 2- linux y
-							mac
-						</h3>
+						<h3>03. Ramas sin commits pendientes</h3>
 
-						<p class="code_box">
-							<span>></span> git <strong>config</strong> --global
-							core<strong>.autocrlf</strong> true
-						</p>
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/merge/con3.png"
+								alt="ramas sin commits pendientes"
+							/>
+						</div>
+					</section>
 
+					<section class="sect_content">
+						<h3>04. Realizando la fusion entre ramas</h3>
+
+						<!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
 						<p class="code_box">
-							<span>></span> git <strong>config</strong> --global
-							core<strong>.autocrlf</strong> input
+							<span>></span> git
+							<strong>merge</strong> "nombre-rama-actualizada"
 						</p>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/config/con3.png"
-								alt="estandarizacion windows, linux y
-							mac"
+								src="./assets/images/merge/con4.png"
+								alt="realizando la fusion entre ramas"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>05. Conflicto en la fusion</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/merge/con5.png"
+								alt="conflicto en la fusion"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>06. Conflicto solucionado</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/merge/con6.png"
+								alt="conflicto solucionado"
 							/>
 						</div>
 					</section>
@@ -139,7 +153,7 @@
 				<!--  
                     section_footer
                 -->
-				<footer class="section_footer">Config - Git</footer>
+				<footer class="section_footer">Conflicts - Merge</footer>
 			</main>
 		</div>
 

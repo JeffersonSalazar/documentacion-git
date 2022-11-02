@@ -1,7 +1,6 @@
-quedamos en la seccion commit/amend (amend no tiene ruta ni archivo)
+2 log
 
-1 falta completar la descripcion de la seccion git config
-
+4 pull/conflicts
 
 curso git jhon mircha visto desde el minuto 45 en adelante, ver desde
 2h 28min hacia abajo
