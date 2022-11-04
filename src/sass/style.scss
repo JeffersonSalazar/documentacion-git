@@ -18,6 +18,11 @@ $colorFive: #ccc;
 $borderOne: #eaecef;
 
 /*
+	variables para definir sombras
+*/
+$shadowOne: #b3b1b14d;
+
+/*
 	formatiamos las margenes y espaciados que definen los
 	navegadores por defecto
 */
@@ -55,7 +60,7 @@ body {
 		definimos una sombra cuando inicia el scroll
 	*/
 	&.js_header_scroll {
-		box-shadow: 0 2px 5px #b3b1b14d;
+		box-shadow: 0 2px 5px $shadowOne;
 	}
 
 	/*
@@ -218,34 +223,40 @@ body {
 		}
 
 		/*
-			search_box: definimos flexbox con su propiedad
-			align-items y una altura para centrar de manera vertical 
-			los elementos que este contiene, finalmente definimos 
+			search_box: definimos position: relative debido a que uno de sus 
+            elementos hijos tiene definido position: absolute, finalmente definimos 
 			un margen en la parte superior 
 		*/
 		.search_box {
-			display: flex;
-			height: 35px;
-			align-items: center;
-			border: 1px solid $borderOne;
-			border-radius: 50px;
+			position: relative;
 			margin-top: 30px;
 
 			/*
-				tag-input: definimos border: none y outline: none 
-				para remover un borde que generan los navegadores 
-				en los inputs, finalmente definimos un espaciado 
-				en el eje-Y para este elemento 
+				tag-input: definimos outline: none  para remover el borde que 
+				generan los navegadores en los inputs, finalmente definimos 
+				un espaciado en el eje-Y para este elemento 
 			*/
 			input {
-				border: none;
 				outline: none;
 				background-color: transparent;
 				color: $colorFour;
+				border: 1px solid $borderOne;
+				border-radius: 50px;
 				font-size: 17px;
 				letter-spacing: 0.5px;
-				width: 153px;
+				width: 100%;
+				height: 35px;
 				padding: 0 8px 0 14px;
+				transition: box-shadow 0.2s;
+
+				/*
+					cuando tag-input tiene el foco, modificamos 
+					el color del borde y añadimos una sombra
+				*/
+				&:focus {
+					border: 1px solid #f64d2792;
+					box-shadow: 0 0 8px 0 $shadowOne;
+				}
 			}
 
 			/*
@@ -258,6 +269,9 @@ body {
 				*/
 				svg {
 					vertical-align: top;
+					position: absolute;
+					top: 6px;
+					right: 12px;
 					fill: $colorOne;
 					width: 24px;
 					height: 24px;
